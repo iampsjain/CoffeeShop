@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.CoffeShop.Coffeeshop.model.Product;
 import com.CoffeeShop.Coffeeshop.repo.ProductRepo;
 import com.CoffeeShop.Coffeeshop.service.ProductService;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Service
 public class ProductServiceImpl implements ProductService {
@@ -22,7 +23,8 @@ public class ProductServiceImpl implements ProductService {
 
 	@Override
 	public Product getProduct(int product_id) {
-		return productRepo.getOne(product_id);
+		int id = product_id;
+		return productRepo.getProductById(id);
 	}
 
 	@Override

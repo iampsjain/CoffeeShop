@@ -12,7 +12,7 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @SpringBootApplication
 @EntityScan("com.CoffeShop.Coffeeshop.model")
-@ComponentScan({"com.CoffeeShop.Coffeeshop.Controller","com.CoffeeShop.Coffeeshop.service"})
+@ComponentScan({"com.CoffeeShop.Coffeeshop.Controller","com.CoffeeShop.Coffeeshop.service","com.CoffeeShop.Coffeeshop.service.impl"})
 
 public class CoffeeshopApplication {
 
