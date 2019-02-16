@@ -21,8 +21,18 @@ public class Product {
 	@Column
 	long price;
 
+	@Column
+	String shortDesc;
+
+	public String getShortDesc() {
+		return shortDesc;
+	}
+
+	public void setShortDesc(String shortDesc) {
+		this.shortDesc = shortDesc;
+	}
+
 	public Product() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public int getId() {

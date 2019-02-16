@@ -2,28 +2,39 @@ package com.CoffeeShop.Coffeeshop.service.impl;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.CoffeShop.Coffeeshop.model.Address;
 import com.CoffeShop.Coffeeshop.model.Billing;
+import com.CoffeeShop.Coffeeshop.repo.AddressRepo;
+import com.CoffeeShop.Coffeeshop.repo.BillingRepo;
 import com.CoffeeShop.Coffeeshop.service.BillingService;
 
+@Service
 public class BillingServiceImpl implements BillingService {
+	@Autowired
+	BillingRepo billingRepo;
+
+	@Autowired
+	AddressRepo addressRepo;
 
 	@Override
 	public List<Billing> getBillings(int customer_id) {
 		// TODO Auto-generated method stub
-		return null;
+		return billingRepo.findAll();
 	}
 
 	@Override
 	public Address getBiilingAddress(int billingId) {
-		// TODO Auto-generated method stub
-		return null;
+		Billing bill = billingRepo.getOne(billingId);
+		Address address = addressRepo.getOne(bill.getAddressId());
+		return address;
 	}
 
 	@Override
 	public Billing addBill(Billing billing) {
-		// TODO Auto-generated method stub
-		return null;
+		return billingRepo.save(billing);
 	}
 
 	@Override
