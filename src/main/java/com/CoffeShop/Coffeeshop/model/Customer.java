@@ -15,7 +15,7 @@ public class Customer {
 	@Column
 	int id;
 
-	@Column
+	@Column(unique=true)
 	String username;
 
 	@Column
