@@ -1,0 +1,36 @@
+[33mcommit 6bda63194a44017c5cfb862cfe906e06d84d0e08[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 726a74a 181c203
+Author: darshu8 <nnd.darshan@gmail.com>
+Date:   Sat Feb 16 11:59:31 2019 +0530
+
+    Changed port to default http port
+
+[33mcommit 726a74ab98fd1dbcefe0185f4054c5caa72c923f[m
+Author: darshu8 <nnd.darshan@gmail.com>
+Date:   Sat Feb 16 11:52:42 2019 +0530
+
+    fixed port number
+
+[33mcommit 181c20361776e3c6aeeb78066ef3d7889ade61fc[m
+Author: iampsjain <iampsjain@gmail.com>
+Date:   Sat Feb 16 11:51:01 2019 +0530
+
+    changed port application.properties
+
+[33mcommit a213a40b79583c81e913aebdefbba88bee2db132[m
+Author: darshu8 <nnd.darshan@gmail.com>
+Date:   Sat Feb 16 11:50:13 2019 +0530
+
+    added configuration for database in application.property
+
+[33mcommit dfbe753f7884ccc541671b2391ffee4ef028d0e1[m
+Author: iampsjain <iampsjain@gmail.com>
+Date:   Sat Feb 16 11:47:23 2019 +0530
+
+    added project structure
+
+[33mcommit 4ced39429bdd73012b5d751d8be66453390909bd[m
+Author: iampsjain <iampsjain@gmail.com>
+Date:   Sat Feb 16 11:29:24 2019 +0530
+
+    abc

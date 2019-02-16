@@ -1,5 +1,5 @@
 package com.CoffeeShop.service;
 
-public class ProductService {
+public class CustomerServiceImpl {
 
 }

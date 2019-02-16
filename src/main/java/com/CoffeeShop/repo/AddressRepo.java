@@ -1,5 +1,5 @@
 package com.CoffeeShop.repo;
 
-public class Billing {
+public interface AddressRepo {
 
 }
