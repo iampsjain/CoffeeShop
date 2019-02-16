@@ -1,4 +1,4 @@
-package com.CoffeeShop.security;
+package com.CoffeeShop.Coffeeshop.security;
 
 import java.io.IOException;
 

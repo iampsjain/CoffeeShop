@@ -1,4 +1,4 @@
-package com.CoffeShop.model;
+package com.CoffeShop.Coffeeshop.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,7 +11,7 @@ import javax.persistence.Table;
 @Table
 public class Address {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	@Column
 	int id;
 

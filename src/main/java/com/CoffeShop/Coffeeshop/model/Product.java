@@ -1,4 +1,4 @@
-package com.CoffeShop.model;
+package com.CoffeShop.Coffeeshop.model;
 
 import javax.persistence.*;
 
@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class Product {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	@Column(name = "product_id")
 	private int id;
 
