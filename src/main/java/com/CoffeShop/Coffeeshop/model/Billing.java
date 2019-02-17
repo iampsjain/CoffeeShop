@@ -17,7 +17,13 @@ public class Billing {
 
 	@Column
 	String payment_method;
-
+	
+	@Column
+	String productName;
+	
+	@Column
+	String productId;
+	
 	@Column
 	long bill;
 
@@ -26,6 +32,22 @@ public class Billing {
 
 	@Column
 	int addressId;
+
+	public String getProductName() {
+		return productName;
+	}
+
+	public void setProductName(String productName) {
+		this.productName = productName;
+	}
+
+	public String getProductId() {
+		return productId;
+	}
+
+	public void setProductId(String productId) {
+		this.productId = productId;
+	}
 
 	public Billing() {
 	}

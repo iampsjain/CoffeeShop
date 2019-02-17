@@ -32,20 +32,7 @@ public class CustomerServiceImpl implements CustomerService {
 		return customerRepo.save(customer);
 	}
 
-	@Override
-	public Customer update(Customer customer) {
-		Customer c = customerRepo.getOne(customer.getId());
-		if (c == null) {
-			return new Customer();
-		}
-		c.setName(customer.getName());
-		c.setPassword(customer.getPassword());
-		c.setRole(customer.getRole());
-		c.setSurname(customer.getSurname());
-		c.setUsername(customer.getUsername());
-		return customerRepo.save(c);
-	}
-
+	
 	@Override
 	public Customer delete(int id) {
 		Customer customer = customerRepo.getOne(id);
@@ -56,16 +43,6 @@ public class CustomerServiceImpl implements CustomerService {
 		return customer;
 	}
 
-	@Override
-	public Customer validateCustomer(Customer customer) {
-		Customer c = customerRepo.getCustomerByUsername(customer.getUsername());
-		if (c == null) {
-			return new Customer();
-		}
-		if (c.getUsername().equals(customer.getUsername()) && c.getPassword().equals(customer.getPassword())) {
-			return c;
-		}
-		return new Customer();
-	}
+	
 
 }

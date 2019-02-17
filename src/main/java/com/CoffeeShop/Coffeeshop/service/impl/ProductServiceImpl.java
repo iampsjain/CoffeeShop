@@ -2,7 +2,10 @@ package com.CoffeeShop.Coffeeshop.service.impl;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import com.CoffeShop.Coffeeshop.model.Product;
@@ -46,12 +49,9 @@ public class ProductServiceImpl implements ProductService {
 	}
 
 	@Override
-	public Product deleteProduct(int product_id) {
-		Product p = productRepo.getOne(product_id);
-		if (p == null) {
-			return new Product();
-		}
+	public void deleteById(int product_id) {
+		
 		productRepo.deleteById(product_id);
-		return p;
+
 	}
 }

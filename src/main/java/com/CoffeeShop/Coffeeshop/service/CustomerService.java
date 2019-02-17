@@ -16,8 +16,6 @@ public interface CustomerService {
 
 	public Customer add(Customer customer);
 
-	public Customer update(Customer customer);
-
+	
 	public Customer delete(int id);
-	public Customer validateCustomer(Customer customer);
 }

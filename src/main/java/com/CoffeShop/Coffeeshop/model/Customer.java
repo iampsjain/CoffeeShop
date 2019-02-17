@@ -13,19 +13,41 @@ public class Customer {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	@Column
-	int id;
-
-	@Column(unique=true)
-	String username;
-
-	@Column
-	String password;
+	int id;	
 
 	@Column
 	String name;
-
+	
+	@Column
+	String Bill;
+	
+	@Column
+	String surname;
+	
+	@Column
+	String Role;
+	
+	@Column
+	String addressID;
+	
 	public Customer() {
 		// TODO Auto-generated constructor stub
+	}
+
+	public String getBill() {
+		return Bill;
+	}
+
+	public void setBill(String bill) {
+		Bill = bill;
+	}
+
+	public String getAddressID() {
+		return addressID;
+	}
+
+	public void setAddressID(String addressID) {
+		this.addressID = addressID;
 	}
 
 	public int getId() {
@@ -36,21 +58,8 @@ public class Customer {
 		this.id = id;
 	}
 
-	public String getUsername() {
-		return username;
-	}
+	
 
-	public void setUsername(String username) {
-		this.username = username;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
 
 	public String getName() {
 		return name;
@@ -76,6 +85,4 @@ public class Customer {
 		Role = role;
 	}
 
-	String surname;
-	String Role;
 }

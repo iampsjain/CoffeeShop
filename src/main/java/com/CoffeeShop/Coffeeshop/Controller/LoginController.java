@@ -16,9 +16,6 @@ public class LoginController {
 	@Autowired
 	CustomerService customerService;
 
-	@PostMapping("/validate")
-	public Customer validate(@RequestBody Customer customer) {
-		return customerService.validateCustomer(customer);
-	}
+
 	
 }

@@ -31,10 +31,7 @@ public class CustomerController {
 	public Customer add(@RequestBody Customer customer) {
 		return customerService.add(customer);
 	}
-	@PutMapping("/customer")
-	public Customer update(@RequestBody Customer customer) {
-		return customerService.update(customer);
-	}
+	
 
 	@DeleteMapping("/customer")
 	public Customer delete(int id) {
