@@ -3,6 +3,7 @@ package com.CoffeeShop.Coffeeshop.Controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.CoffeShop.Coffeeshop.model.Address;
 import com.CoffeShop.Coffeeshop.model.Billing;
+import com.CoffeShop.Coffeeshop.model.Customer;
 import com.CoffeeShop.Coffeeshop.service.BillingService;
 import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
 
@@ -34,4 +36,10 @@ public class BillingController {
 		return billingService.addBill(billing);
 	}
  
+	@GetMapping("/testbill/{id}")
+	public Billing getBillByCustomerId(@PathVariable("id") int id)
+	{
+		return billingService.getBillByCustomerId(id);
+	}
+
 }

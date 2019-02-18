@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.CoffeShop.Coffeeshop.model.Address;
 import com.CoffeShop.Coffeeshop.model.Billing;
+import com.CoffeShop.Coffeeshop.model.Customer;
 import com.CoffeeShop.Coffeeshop.repo.AddressRepo;
 import com.CoffeeShop.Coffeeshop.repo.BillingRepo;
 import com.CoffeeShop.Coffeeshop.service.BillingService;
@@ -39,8 +40,15 @@ public class BillingServiceImpl implements BillingService {
 
 	@Override
 	public Billing updateBill(Billing billing) {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method stu
+		
 		return null;
+	}
+
+	@Override
+	public Billing getBillByCustomerId(int id) {
+		 
+		return billingRepo.getBillByCustomerId(id);
 	}
 
 }
