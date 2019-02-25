@@ -45,7 +45,7 @@ public class ProductServiceImpl implements ProductService {
 		p.setImgurl(product.getImgurl());
 		p.setPrice(product.getPrice());
 		p.setTitle(product.getTitle());
-		return productRepo.save(product);
+		return productRepo.save(p);
 	}
 
 	@Override

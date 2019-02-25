@@ -22,7 +22,7 @@ public class Billing {
 	String productName;
 	
 	@Column
-	String productId;
+	int productId;
 	
 	@Column
 	long bill;
@@ -41,11 +41,11 @@ public class Billing {
 		this.productName = productName;
 	}
 
-	public String getProductId() {
+	public int getProductId() {
 		return productId;
 	}
 
-	public void setProductId(String productId) {
+	public void setProductId(int productId) {
 		this.productId = productId;
 	}
 

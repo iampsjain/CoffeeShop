@@ -16,5 +16,7 @@ public interface BillingService {
 	public Billing addBill(Billing billing);
 
 	public Billing updateBill(Billing billing);
-
+	
+	public List<Billing> getAllbill();
+	
 }

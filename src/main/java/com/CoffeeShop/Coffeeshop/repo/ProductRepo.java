@@ -7,6 +7,6 @@ import com.CoffeShop.Coffeeshop.model.Product;
 
 @Repository
 public interface ProductRepo extends JpaRepository<Product, Integer> {
-	Product getProductById(int id);
-	void deleteById(int id);
+	public Product getProductById(int id);
+	public void deleteById(int id);
 }

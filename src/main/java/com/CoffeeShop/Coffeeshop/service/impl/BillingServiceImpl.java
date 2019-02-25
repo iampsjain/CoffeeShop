@@ -43,4 +43,10 @@ public class BillingServiceImpl implements BillingService {
 		return null;
 	}
 
+	@Override
+	public List<Billing> getAllbill() {
+		// TODO Auto-generated method stub
+		return billingRepo.findAll();
+	}
+
 }

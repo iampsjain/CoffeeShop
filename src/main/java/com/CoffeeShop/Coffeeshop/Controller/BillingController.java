@@ -33,5 +33,8 @@ public class BillingController {
 	public Billing addBill(@RequestBody Billing billing) {
 		return billingService.addBill(billing);
 	}
- 
+	@GetMapping("/billing")
+	public List<Billing> getAll() {
+		return billingService.getAllbill();
+	}
 }

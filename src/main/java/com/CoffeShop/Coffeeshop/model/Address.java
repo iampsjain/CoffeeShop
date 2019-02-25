@@ -38,6 +38,18 @@ public class Address {
 
 	@Column
 	String state;
+	
+	@Column
+	int ProductId;
+	
+	
+	public int getProductId() {
+		return ProductId;
+	}
+
+	public void setProductId(int productId) {
+		ProductId = productId;
+	}
 
 	public Address() {
 	}
