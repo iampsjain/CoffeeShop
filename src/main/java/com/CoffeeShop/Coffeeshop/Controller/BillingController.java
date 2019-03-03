@@ -22,6 +22,11 @@ public class BillingController {
 	@Autowired
 	BillingService billingService;
 
+	@GetMapping("/billing")
+	public List<Billing> getAllBilling(){
+		return billingService.getAllBilling();
+	}
+	
 	@GetMapping("/billing/{customer_id}")
 	public List<Billing> getBillings(@PathVariable int customer_id) {
 		return billingService.getBillings(customer_id);

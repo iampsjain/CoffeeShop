@@ -3,7 +3,11 @@ package com.CoffeeShop.Coffeeshop.service.impl;
 import java.util.List;
 import java.util.Optional;
 
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.CoffeShop.Coffeeshop.model.Address;
@@ -45,11 +49,30 @@ public class AddressServiceImpl implements AddressService{
 
 
 	@Override
-	public Address updateAddress(Address address) {
-		Address p = addressRepo.getOne(address.getId());
+	public ResponseEntity<?> updateAddress(Address address) {
+		Address p = null;
+		HttpServletResponse response;
+		try {
+		 p= addressRepo.getOne(address.getId());
+		
+		
 		p.setProductId(address.getProductId());
-		 
-		return addressRepo.save(p);
+		p.setAddress(address.getAddress());
+		p.setCity(address.getCity());
+		p.setEmail_id(address.getEmail_id());
+		p.setMobile_number(address.getMobile_number());
+		p.setName(address.getName());
+		p.setPincode(address.getPincode());
+		p.setSurname(address.getSurname());
+		p.setState(address.getState());
+		addressRepo.save(p);
+		
+		}
+		catch(Exception e) {
+			
+			return new ResponseEntity<>("Id Not Found", HttpStatus.NOT_FOUND);
+		}
+	return new ResponseEntity<>("Data Updated With id =  "+p.getId(), HttpStatus.OK);
 	}
 
 

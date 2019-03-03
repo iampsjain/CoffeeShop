@@ -54,7 +54,7 @@ private void sendmail(Product product,Address address) throws AddressException, 
 	   
 	   Session session = Session.getInstance(props, new javax.mail.Authenticator() {
 	      protected PasswordAuthentication getPasswordAuthentication() {
-	         return new PasswordAuthentication("iampsjain@gmail.com", "Pushpak@1997");
+	         return new PasswordAuthentication("iampsjain@gmail.com", "********");
 	      }
 	   });
 	   Message msg = new MimeMessage(session);
@@ -555,7 +555,7 @@ private void sendmail(Product product,Address address) throws AddressException, 
 	  
 	   
 	   String mobile=address.getMobile_number();
-	  String authtoken="155210AtYL1fumEBt5936e0cb";
+	  String authtoken="**********";
 	   Client client = Client.create();
 		WebResource webResource = client.resource("http://api.msg91.com/api/sendhttp.php?country=91&sender=OCSHOP&route=4&mobiles="+address.getMobile_number()+"&authkey=155210AtYL1fumEBt5936e0cb&message="+message.replaceAll("\\s","%20")+"");
 		ClientResponse response = webResource.get(ClientResponse.class);

@@ -21,5 +21,6 @@ public interface BillingService {
 	
 	public Billing getBillByCustomerId(int id);
 
+	public List<Billing> getAllBilling();
 
 }
